@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompuBot — Assistente Virtual de Informática</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+
+        <!-- Cabeçalho -->
+        <header class="chat-header">
+            <div class="bot-avatar">💻</div>
+            <div class="bot-info">
+                <h1>CompuBot</h1>
+                <span class="bot-status">&#9679; Online</span>
+            </div>
+            <div class="header-tag">Assistente Virtual · IA</div>
+        </header>
+
+        <!-- Área de mensagens -->
+        <main class="chat-messages" id="chat-messages">
+
+            <!-- Mensagem inicial do bot -->
+            <div class="message bot-message">
+                <div class="message-content">
+                    Olá! Sou o <strong>CompuBot</strong>, seu assistente virtual de
+                    informática! 💻 Posso te ajudar com dúvidas sobre sistemas
+                    operacionais, editores de código, atalhos de teclado, assistentes
+                    virtuais, reconhecimento de voz e muito mais!
+                </div>
+                <div class="message-time" id="hora-inicial"></div>
+            </div>
+
+            <!-- Sugestões de perguntas -->
+            <div class="sugestoes" id="sugestoes">
+                <p>&#128161; Experimente perguntar:</p>
+                <button class="sugestao-btn" onclick="enviarSugestao(this)">
+                    O que é um sistema operacional?
+                </button>
+                <button class="sugestao-btn" onclick="enviarSugestao(this)">
+                    O que é um editor de código?
+                </button>
+                <button class="sugestao-btn" onclick="enviarSugestao(this)">
+                    O que é reconhecimento de voz?
+                </button>
+                <button class="sugestao-btn" onclick="enviarSugestao(this)">
+                    Quais os atalhos de teclado mais usados?
+                </button>
+            </div>
+        </main>
+
+        <!-- Área de entrada -->
+        <footer class="chat-input-area">
+            <input
+                type="text"
+                id="user-input"
+                placeholder="Digite sua pergunta sobre informática..."
+                autocomplete="off"
+                onkeypress="verificarEnter(event)"
+            >
+            <button class="send-btn" id="send-btn" onclick="enviarMensagem()" title="Enviar">
+                &#9658;
+            </button>
+        </footer>
+
+    </div>
+
+    <script src="chat.js"></script>
+</body>
+</html>

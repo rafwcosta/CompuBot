@@ -1,0 +1,28 @@
+# ─────────────────────────────────────────────────────────────
+# requirements.txt — CompuBot
+#
+# IMPORTANTE: Use Python 3.8 para compatibilidade total com o ChatterBot.
+# No Python 3.9+ o ChatterBot pode apresentar erros relacionados ao
+# time.clock() que foi removido. Nesse caso, instale as dependências
+# abaixo e edite manualmente o arquivo utils.py do chatterbot.
+#
+# Como instalar:
+#   pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────
+
+# Chatbot
+chatterbot==1.0.4
+chatterbot-corpus==1.2.0
+
+# Banco de dados (versão compatível com chatterbot 1.0.4)
+SQLAlchemy==1.3.23
+
+# Serialização de dados
+PyYAML==5.4.1
+
+# Servidor web
+Flask==2.2.5
+flask-cors==4.0.0
+
+# Interface de linha de comando do Werkzeug
+Werkzeug==2.2.3
