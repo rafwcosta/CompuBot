@@ -63,7 +63,7 @@ def criar_e_treinar_bot():
                     'Tente perguntar sobre sistemas operacionais, editores de código, '
                     'atalhos de teclado, assistentes virtuais ou reconhecimento de voz!'
                 ),
-                'maximum_similarity_threshold': 0.65
+                'maximum_similarity_threshold': 0.3
             }
         ],
         read_only=False

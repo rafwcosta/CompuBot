@@ -81,7 +81,7 @@
       "id": 5,
       "tema": "como_bloquear_tela",
       "variacoes": [
-        "Como bloquear a tela do computador?",
+        "Como bloquear a tela?",
         "Como travar a tela do PC?",
         "Qual o atalho para bloquear a tela?",
         "Como proteger o computador quando vou embora?"
@@ -92,8 +92,8 @@
       "id": 6,
       "tema": "o_que_e_assistente_virtual",
       "variacoes": [
-        "O que é um assistente virtual?",
-        "Para que serve um assistente virtual?",
+        "Assistente virtual o que é?",
+        "Qual a utilidade de um assistente virtual?",
         "Como funciona um assistente virtual?",
         "O que faz um assistente virtual?"
       ],
@@ -105,7 +105,7 @@
       "variacoes": [
         "O que é inteligência artificial?",
         "O que é IA?",
-        "Para que serve a inteligência artificial?",
+        "Onde a inteligência artificial é aplicada?",
         "Como funciona a inteligência artificial?"
       ],
       "resposta": "Inteligência Artificial (IA) é a área da computação que desenvolve sistemas capazes de realizar tarefas que normalmente exigiriam inteligência humana, como reconhecer fala, interpretar imagens e tomar decisões. Ela é usada em assistentes virtuais, carros autônomos e diagnósticos médicos. O aprendizado de máquina (Machine Learning) é uma das principais técnicas da IA."

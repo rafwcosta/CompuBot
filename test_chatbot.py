@@ -48,7 +48,7 @@ class TestCompuBot(unittest.TestCase):
                 {
                     'import_path': 'chatterbot.logic.BestMatch',
                     'default_response': 'Não entendi.',
-                    'maximum_similarity_threshold': 0.65
+                    'maximum_similarity_threshold': 0.3
                 }
             ],
             read_only=False
