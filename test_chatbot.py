@@ -3,9 +3,7 @@ test_chatbot.py — CompuBot
 Testes automatizados com unittest.
 
 Como executar:
-    python test_chatbot.py
-    ou
-    python -m unittest test_chatbot.py -v
+    python3 test_chatbot.py
 """
 
 import os
@@ -40,9 +38,8 @@ class TestCompuBot(unittest.TestCase):
             database_uri=f'sqlite:///{TEST_DB}',
             logic_adapters=[
                 {
-                    'import_path': 'chatterbot.logic.BestMatch',
-                    'default_response': 'Não entendi.',
-                    'maximum_similarity_threshold': 0.3
+                    'import_path': 'config_adapter.ConfigAdapter',
+                    'config_path': CONFIG_PATH
                 }
             ],
             read_only=False
@@ -80,17 +77,15 @@ class TestCompuBot(unittest.TestCase):
             f"\n[OBTIDO]   {resposta}"
         )
 
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
     # Saudações
-    # Nota: variações longas são testadas pois o BestMatch do ChatterBot
-    # tem limitações com palavras muito curtas como 'oi' e 'olá' isoladas.
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
 
-    def test_saudacao_ola_tudo_bem(self):
-        self._verificar('olá tudo bem', self.config['saudacoes']['resposta'])
+    def test_saudacao_ola(self):
+        self._verificar('olá', self.config['saudacoes']['resposta'])
 
-    def test_saudacao_oi_tudo_bem(self):
-        self._verificar('oi tudo bem', self.config['saudacoes']['resposta'])
+    def test_saudacao_oi(self):
+        self._verificar('oi', self.config['saudacoes']['resposta'])
 
     def test_saudacao_bom_dia(self):
         self._verificar('bom dia', self.config['saudacoes']['resposta'])
@@ -101,9 +96,9 @@ class TestCompuBot(unittest.TestCase):
     def test_saudacao_boa_noite(self):
         self._verificar('boa noite', self.config['saudacoes']['resposta'])
 
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
     # Despedidas
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
 
     def test_despedida_tchau(self):
         self._verificar('tchau', self.config['despedidas']['resposta'])
@@ -114,9 +109,9 @@ class TestCompuBot(unittest.TestCase):
     def test_despedida_obrigado(self):
         self._verificar('obrigado', self.config['despedidas']['resposta'])
 
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
     # Sistema Operacional
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
 
     def test_sistema_operacional_variacao_1(self):
         p = self._tema('o_que_e_sistema_operacional')
@@ -130,9 +125,9 @@ class TestCompuBot(unittest.TestCase):
         p = self._tema('o_que_e_sistema_operacional')
         self._verificar(p['variacoes'][2], p['resposta'])
 
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
     # Abrir Navegador
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
 
     def test_navegador_variacao_1(self):
         p = self._tema('como_abrir_navegador')
@@ -146,9 +141,9 @@ class TestCompuBot(unittest.TestCase):
         p = self._tema('como_abrir_navegador')
         self._verificar(p['variacoes'][2], p['resposta'])
 
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
     # Editor de Código
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
 
     def test_editor_codigo_variacao_1(self):
         p = self._tema('o_que_e_editor_de_codigo')
@@ -162,9 +157,9 @@ class TestCompuBot(unittest.TestCase):
         p = self._tema('o_que_e_editor_de_codigo')
         self._verificar(p['variacoes'][2], p['resposta'])
 
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
     # Ajustar Volume
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
 
     def test_volume_variacao_1(self):
         p = self._tema('como_ajustar_volume')
@@ -178,9 +173,9 @@ class TestCompuBot(unittest.TestCase):
         p = self._tema('como_ajustar_volume')
         self._verificar(p['variacoes'][2], p['resposta'])
 
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
     # Bloquear Tela
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
 
     def test_bloquear_tela_variacao_1(self):
         p = self._tema('como_bloquear_tela')
@@ -194,9 +189,9 @@ class TestCompuBot(unittest.TestCase):
         p = self._tema('como_bloquear_tela')
         self._verificar(p['variacoes'][2], p['resposta'])
 
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
     # Assistente Virtual
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
 
     def test_assistente_virtual_variacao_1(self):
         p = self._tema('o_que_e_assistente_virtual')
@@ -210,9 +205,9 @@ class TestCompuBot(unittest.TestCase):
         p = self._tema('o_que_e_assistente_virtual')
         self._verificar(p['variacoes'][2], p['resposta'])
 
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
     # Inteligência Artificial
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
 
     def test_inteligencia_artificial_variacao_1(self):
         p = self._tema('o_que_e_inteligencia_artificial')
@@ -226,9 +221,9 @@ class TestCompuBot(unittest.TestCase):
         p = self._tema('o_que_e_inteligencia_artificial')
         self._verificar(p['variacoes'][2], p['resposta'])
 
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
     # Reconhecimento de Voz
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
 
     def test_reconhecimento_voz_variacao_1(self):
         p = self._tema('o_que_e_reconhecimento_de_voz')
@@ -242,9 +237,9 @@ class TestCompuBot(unittest.TestCase):
         p = self._tema('o_que_e_reconhecimento_de_voz')
         self._verificar(p['variacoes'][2], p['resposta'])
 
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
     # Atalhos de Teclado
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
 
     def test_atalhos_teclado_variacao_1(self):
         p = self._tema('atalhos_de_teclado')
@@ -258,9 +253,9 @@ class TestCompuBot(unittest.TestCase):
         p = self._tema('atalhos_de_teclado')
         self._verificar(p['variacoes'][2], p['resposta'])
 
-    # ─────────────────────────────────────────────
-    # Validação da Estrutura do config.json
-    # ─────────────────────────────────────────────
+    # ──────────────────────────────────────────
+    # Validação da estrutura do config.json
+    # ──────────────────────────────────────────
 
     def test_json_possui_campos_obrigatorios(self):
         """config.json deve conter todos os campos obrigatórios."""
@@ -288,17 +283,17 @@ class TestCompuBot(unittest.TestCase):
 
     def test_saudacoes_possuem_variacoes_e_resposta(self):
         """Saudações devem ter variações e uma resposta definida."""
-        saudacoes = self.config['saudacoes']
-        self.assertIn('variacoes', saudacoes)
-        self.assertIn('resposta', saudacoes)
-        self.assertGreater(len(saudacoes['variacoes']), 0)
+        s = self.config['saudacoes']
+        self.assertIn('variacoes', s)
+        self.assertIn('resposta', s)
+        self.assertGreater(len(s['variacoes']), 0)
 
     def test_despedidas_possuem_variacoes_e_resposta(self):
         """Despedidas devem ter variações e uma resposta definida."""
-        despedidas = self.config['despedidas']
-        self.assertIn('variacoes', despedidas)
-        self.assertIn('resposta', despedidas)
-        self.assertGreater(len(despedidas['variacoes']), 0)
+        d = self.config['despedidas']
+        self.assertIn('variacoes', d)
+        self.assertIn('resposta', d)
+        self.assertGreater(len(d['variacoes']), 0)
 
 
 if __name__ == '__main__':
