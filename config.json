@@ -5,14 +5,14 @@
 
   "saudacoes": {
     "variacoes": [
-      "olá",
-      "oi",
+      "olá tudo bem",
+      "oi tudo bem",
       "hey",
       "bom dia",
       "boa tarde",
       "boa noite",
-      "olá tudo bem",
-      "oi tudo bem",
+      "olá",
+      "oi",
       "e aí"
     ],
     "resposta": "Olá! Sou o CompuBot, seu assistente virtual de informática! 💻 Posso te ajudar com dúvidas sobre sistemas operacionais, editores de código, atalhos de teclado, assistentes virtuais, reconhecimento de voz e muito mais!"
@@ -37,10 +37,10 @@
       "id": 1,
       "tema": "o_que_e_sistema_operacional",
       "variacoes": [
-        "O que é um sistema operacional?",
+        "Sistema operacional o que é?",
         "Para que serve o sistema operacional?",
-        "O que faz o sistema operacional?",
-        "Me explique o que é sistema operacional"
+        "Windows Linux macOS são exemplos de quê?",
+        "SO serve para gerenciar hardware e software?"
       ],
       "resposta": "O sistema operacional (SO) é o software principal do computador, responsável por gerenciar todos os recursos de hardware e software. Ele serve como intermediário entre o usuário e a máquina. Exemplos populares são Windows, Linux e macOS. Sem o SO, seria impossível usar o computador de forma prática."
     },
@@ -49,9 +49,9 @@
       "tema": "como_abrir_navegador",
       "variacoes": [
         "Como abrir o navegador?",
-        "Como abrir o navegador no computador?",
-        "Como acessar a internet pelo navegador?",
-        "Qual comando abre o navegador?"
+        "Como acessar o Chrome ou Firefox?",
+        "Qual comando executa o navegador no Linux?",
+        "Como entrar na internet pelo computador?"
       ],
       "resposta": "Para abrir o navegador você pode: clicar duas vezes no ícone na área de trabalho; usar a barra de tarefas; ou pressionar a tecla Windows e digitar o nome do navegador (Chrome, Firefox, Edge). No Linux, também é possível abrir pelo terminal digitando o nome do navegador, como 'firefox' ou 'google-chrome'."
     },
@@ -59,10 +59,10 @@
       "id": 3,
       "tema": "o_que_e_editor_de_codigo",
       "variacoes": [
-        "O que é um editor de código?",
-        "Para que serve um editor de código?",
-        "O que é o VS Code?",
-        "Qual a função de um editor de código?"
+        "VS Code é um tipo de quê?",
+        "IDE e editor de código são a mesma coisa?",
+        "Ferramenta para escrever código fonte",
+        "Qual programa usar para programar?"
       ],
       "resposta": "Um editor de código é uma ferramenta desenvolvida para programadores escreverem e organizarem código-fonte. O VS Code (Visual Studio Code), da Microsoft, é um dos mais populares do mundo — é gratuito, leve e extensível. Ele oferece realce de sintaxe, autocompletar, integração com Git e suporte a centenas de linguagens de programação."
     },
@@ -70,10 +70,10 @@
       "id": 4,
       "tema": "como_ajustar_volume",
       "variacoes": [
-        "Como ajustar o volume do computador?",
         "Como aumentar o volume do PC?",
-        "Como controlar o volume do sistema?",
-        "Como diminuir o volume do computador?"
+        "Volume do sistema como controlar?",
+        "Comando amixer no Linux para volume",
+        "Como diminuir o som do computador?"
       ],
       "resposta": "Para ajustar o volume: no Windows, clique no ícone de som na barra de tarefas ou use as teclas de volume do teclado. No Linux, use as teclas multimídia ou acesse as configurações de som. Pelo terminal Linux, o comando 'amixer set Master 10%+' aumenta o volume em 10%, e 'amixer set Master 10%-' diminui."
     },
@@ -81,10 +81,10 @@
       "id": 5,
       "tema": "como_bloquear_tela",
       "variacoes": [
-        "Como bloquear a tela?",
-        "Como travar a tela do PC?",
-        "Qual o atalho para bloquear a tela?",
-        "Como proteger o computador quando vou embora?"
+        "Como bloquear a sessão do usuário?",
+        "Windows L qual é a função?",
+        "Super L no Linux GNOME serve para quê?",
+        "Como proteger o PC quando saio?"
       ],
       "resposta": "Para bloquear a tela: no Windows, pressione Windows + L. No macOS, use Ctrl + Command + Q. No Linux com GNOME, use Super + L. Bloquear a tela é uma boa prática de segurança que protege seus dados quando você se afasta do computador, impedindo acesso não autorizado."
     },
@@ -92,10 +92,10 @@
       "id": 6,
       "tema": "o_que_e_assistente_virtual",
       "variacoes": [
-        "Assistente virtual o que é?",
-        "Qual a utilidade de um assistente virtual?",
-        "Como funciona um assistente virtual?",
-        "O que faz um assistente virtual?"
+        "Siri Alexa Cortana são exemplos de quê?",
+        "Assistente virtual definição",
+        "Robô que conversa e executa tarefas automatizadas",
+        "Programa que interpreta comandos de voz"
       ],
       "resposta": "Um assistente virtual é um programa que simula uma conversa humana e executa tarefas automatizadas. Ele interpreta comandos de voz ou texto e executa ações como abrir programas, buscar informações e controlar dispositivos. Exemplos famosos são a Siri (Apple), Alexa (Amazon), Google Assistente e a Cortana (Microsoft)."
     },
@@ -103,10 +103,10 @@
       "id": 7,
       "tema": "o_que_e_inteligencia_artificial",
       "variacoes": [
-        "O que é inteligência artificial?",
-        "O que é IA?",
-        "Onde a inteligência artificial é aplicada?",
-        "Como funciona a inteligência artificial?"
+        "IA significa o quê?",
+        "Machine learning e IA são a mesma coisa?",
+        "Inteligência artificial exemplos e aplicações",
+        "Redes neurais e deep learning são IA?"
       ],
       "resposta": "Inteligência Artificial (IA) é a área da computação que desenvolve sistemas capazes de realizar tarefas que normalmente exigiriam inteligência humana, como reconhecer fala, interpretar imagens e tomar decisões. Ela é usada em assistentes virtuais, carros autônomos e diagnósticos médicos. O aprendizado de máquina (Machine Learning) é uma das principais técnicas da IA."
     },
@@ -114,10 +114,10 @@
       "id": 8,
       "tema": "o_que_e_reconhecimento_de_voz",
       "variacoes": [
-        "O que é reconhecimento de voz?",
-        "Como funciona o reconhecimento de voz?",
-        "O que é transcrição de áudio?",
-        "Como o computador entende a voz humana?"
+        "Reconhecimento de voz definição",
+        "Whisper da OpenAI para que serve?",
+        "Como converter fala em texto?",
+        "Speech recognition tecnologia"
       ],
       "resposta": "Reconhecimento de voz é a tecnologia que permite ao computador interpretar e transcrever a fala humana em texto. Ela analisa as ondas sonoras do áudio e converte-as em palavras usando modelos de aprendizado de máquina. O Whisper (OpenAI/HuggingFace) é uma ferramenta amplamente usada para isso e é a base dos assistentes virtuais por voz."
     },
@@ -126,9 +126,9 @@
       "tema": "atalhos_de_teclado",
       "variacoes": [
         "Quais são os atalhos de teclado mais usados?",
-        "Quais os principais atalhos do computador?",
-        "Me ensine atalhos de teclado",
-        "Quais teclas de atalho devo conhecer?"
+        "Ctrl C e Ctrl V servem para quê?",
+        "Teclas de atalho para produtividade",
+        "Alt Tab tem qual função?"
       ],
       "resposta": "Os atalhos mais importantes são: Ctrl+C (copiar), Ctrl+V (colar), Ctrl+Z (desfazer), Ctrl+S (salvar), Alt+Tab (trocar de janela), Windows+L (bloquear tela), Ctrl+Alt+T (abrir terminal no Linux), F5 (recarregar página), Ctrl+T (nova aba no navegador) e Ctrl+W (fechar aba). Aprender atalhos aumenta muito a produtividade!"
     }
